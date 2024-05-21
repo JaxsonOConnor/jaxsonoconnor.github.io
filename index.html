@@ -1,34 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>    
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jaxson O'Connor</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
-    </head>
-    <body>
-        <!-- <nav>
-            <p id="title">Jaxson O'Connor</p>
-            <div id="nav-buttons">
-                <button>
-                    <i class="fa-light fa-tv-retro"></i> Request
-                </button>
-                <button>
-                    <i class="fa-regular fa-code"></i> Projects
-                </button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaxson O'Connor - Spring Photography Portfolio</title>
+    <link rel="icon" href="./logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"">
+</head>
+<body>
+    <div class="box">
+        <div class="box-content">
+            <h2>Jaxson O'Connor Portfolio</h2>
+            <p>Here are the photos I submitted for each Photo 1 assignment.</p>
+        </div>
+    </div>
+
+    <!-- <div id="scroll-arrow">
+        <i class="fa-solid fa-arrow-down"></i>
+    </div> -->
+
+    <div class="box">
+        <div class="box-content">
+            <h2>Newest</h2>
+
+            <div class="row">
+                <img src="./FreeChoice.jpg" hover-text="Free Choice" class="landscape" alt="" />
+                <img src="./Mirrors.jpg" hover-text="Mirrors / Emotion" class="portrait" alt="" />
             </div>
-        </nav>
 
-        <div class="box" id="first-box">
-            <div class="box-vertical-text">
-                <h2 class="box-header">Hey, I'm <span class="wave-text">Jaxson</span>.</h2>
-                
+            <div class="row">
+                <img src="./SelfPortrait.jpg" hover-text="Self Portrait" class="landscape" alt="" />
+                <img src="./Words.jpg" hover-text="Words" class="portrait" alt="" />
+                <img src="./Light.jpg" hover-text="Light" class="portrait" alt="" />
             </div>
-        </div> -->
 
-        <span class="wave-text">JAXSON</span>
+            <div class="row">
+                <img src="./FallFinal.jpg" id="fall-final" hover-text="Fall Final" class="portrait" alt="" />
+                <img src="./Motion.jpg" hover-text="Motion" class="portrait" alt="" />
+                <img src="./Portrait.jpg" hover-text="Portrait" class="portrait" alt="" />
+                <img src="./HandsAndFeet.jpg" hover-text="Hands & Feet" class="portrait" alt="" />
+                <img src="./100Pictures.jpg" hover-text="'100 Pictures' Assignment" class="landscape" alt="" />
+            </div>
 
-        <script src="script.js"></script>
-    </body>
+            <h2>Oldest</h2>
+        </div>
+    </div>
+
+    <p id="hover-text"></p>
+
+    <!-- <div id="content">hello</div> -->
+    <script>
+        // document.querySelector("#scroll-arrow").addEventListener("click", () => {
+        //     document.querySelector("#content").scrollIntoView(true, {behavior: "smooth"});
+        // })
+
+        const hover_text = document.querySelector("#hover-text");
+        document.querySelectorAll("[hover-text]").forEach(element => {
+            element.addEventListener("mouseover", () => {
+                hover_text.style.display="block";
+                hover_text.innerText = element.getAttribute("hover-text");
+                element.style.filter="brightness(120%)";
+            })
+            element.addEventListener("mouseout", () => {
+                hover_text.style.display="none";
+                element.style.filter="brightness(100%)";
+            })
+        })
+    </script>
+</body>
 </html>
