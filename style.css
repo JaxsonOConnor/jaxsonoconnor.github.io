@@ -1,107 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
-    --text: #0b0909;
-    --background: #f9f6f6;
-    --primary: #9f7871;
-    --secondary: #cdb3af;
-    --accent: #b88d86;
-    --text-light: #7c736f;
-
-    --border-light: #dad8d8;
+    --border-light: rgb(228, 228, 228);
+    --background-light: rgb(240, 240, 240);
+    --background: white;
+    --text: rgb(20, 20, 20);
+    --header-text: rgb(40, 40, 40);
+    --paragraph-text: rgb(100, 100, 100);
+}
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Integral Extra Bold";
+    src: url("./fonts/Fontspring-DEMO-integralcf-extrabold.otf");
+}
+@font-face {
+    font-family: "Integral Bold";
+    src: url("./fonts/Fontspring-DEMO-integralcf-bold.otf");
+}
+@font-face {
+    font-family: "Poppins Regular";
+    src: url("./fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "Poppins Light";
+    src: url("./fonts/Poppins-Light.ttf");
+}
+@font-face {
+    font-family: "Poppins Medium";
+    src: url("./fonts/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: "Noir Regular";
+    src: url("./fonts/Medium\ 500.otf");
+}
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("./fonts/SpaceGrotesk-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Noir Bold";
+    src: url("./fonts/Medium\ 800.otf");
+}
+.special-text {
+    background-image: url("./200w.gif");
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-position: center;
 }
 body {
+    color: var(--text);
     background: var(--background);
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    font-family: "Integral Bold";
+    color: var(--header-text);
+}
+#title {
+    font-family: "Integral Extra Bold";
+    font-size: 24px;
+    line-height: 0;
+    margin: 0;
+    user-select: none;
+    margin-top: -3px;
     color: var(--text);
-    font-family: "Inter";
-    font-weight: 500;
 }
-::-webkit-scrollbar {
-    display: none;
-}
-.box {
-    min-height: 100vh;
+nav {
+    border-bottom: 1px solid rgb(228, 228, 228);
+    height: 60px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 0 80px;
 }
-.box-content {
+#nav-buttons {
+    margin-left: auto;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 4px;
 }
-.box-content > h2 {
-    text-shadow: 0px 0px .5px var(--text-light);
-    line-height: 0%;
-    font-size: 32px;
-    font-family: "Poppins";
-}
-.box-content > p {
-    line-height: 130%;
-    font-family: "Inter";
-    color: var(--text-light);
-}
-#scroll-arrow {
-    transition: .2s ease;
-    position: fixed;
-    left: 50%;
-    bottom: 5%;
-    height: 30px;
-    aspect-ratio: 1;
-    border-radius: 100%;
-    color: var(--text);
-    /* border: 1px solid var(--border-light); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(145deg, #ffffff, #e0dddd);
-    box-shadow:  5px 5px 10px #cac7c7,
-                -5px -5px 10px #ffffff;
-}
-#scroll-arrow:hover {
-    transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    scale: 1.6;
-    /* background: var(--border-light); */
+#nav-buttons > button:hover {
+    transition: .3s ease;
+    background: var(--background-light);
     cursor: pointer;
 }
-.row {
+#nav-buttons > button {
+    aspect-ratio: 1;
+    height: 55%;
+    border-radius: 7px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
     display: flex;
-    align-items: center;
-    width: 100vw;
     justify-content: center;
+    align-items: center;
 }
-.row > * {
-    transition: .2s ease;
-    padding: 4px;
+#misc {
+    margin-left: auto;
 }
-.landscape {
-    height: 400px;
+#misc > button {
+    /* font-family: "Poppins Regular"; */
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 17px;
+    /* background: transparent; */
+    border-radius: 10px;
+    border: none;
 }
-.portrait {
-    height: 400px;
+#message {
+    font-family: "Space Grotesk";
+    background: var(--text);
+    color: var(--background);
 }
-.image-hover-text {
-    height: 100%;
-    text-align: center;
-    top: 0;
-    margin: 0;
-    font-weight: 500;
-    font-family: "Poppins";
-    line-height: 100%;
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
 }
-/* #content {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 150%;
-    border: 1px solid red;
-} */
-img {
-    border-radius: 5px;
+.box:nth-child(2) {
+    height: calc(100vh - 60px);
 }
-#hover-text {
-    position: fixed;
-    left: 3%;
-    bottom: 3%;
-    font-size: 18px;
-    font-family: "Poppins";
+.box-content {
+    width: 600px;
+}
+.box-content > p {
+    font-family: "Space Grotesk";
+    color: var(--paragraph-text);
+}
+
+@media screen and (max-width: 767px) {
+    #title {
+        display: none;
+    }
+    #message {
+        display: none;
+    }
+    .box-content {
+        width: 80%;
+        text-align: center;
+    }
 }
