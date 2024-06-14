@@ -1,10 +1,28 @@
-:root {
+/* :root {
     --border-light: rgb(228, 228, 228);
     --background-light: rgb(240, 240, 240);
     --background: white;
     --text: rgb(20, 20, 20);
     --header-text: rgb(40, 40, 40);
     --paragraph-text: rgb(100, 100, 100);
+} */
+[data-theme="light"] {
+    --border-light: rgb(228, 228, 228);
+    --background-light: rgb(240, 240, 240);
+    --background: white;
+    --text: rgb(20, 20, 20);
+    --header-text: rgb(40, 40, 40);
+    --paragraph-text: rgb(100, 100, 100);
+    --special-text-background-image-filter: brightness(100%);
+}
+[data-theme="dark"] {
+    --border-light: rgb(53, 53, 53);
+    --background-light: rgb(57, 57, 57);
+    --background: rgb(18, 18, 17);
+    --text: rgb(255, 249, 233);
+    --header-text: rgb(185, 182, 176);
+    --paragraph-text: rgb(167, 163, 154);
+    --special-text-background-image-filter: brightness(200%);
 }
 * {
     box-sizing: border-box;
@@ -46,8 +64,10 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 180%;
     background-position: center;
+    filter: var(--special-text-background-image-filter);
 }
 body {
     color: var(--text);
@@ -69,7 +89,7 @@ h2 {
     color: var(--text);
 }
 nav {
-    border-bottom: 1px solid rgb(228, 228, 228);
+    border-bottom: 1px solid var(--border-light);
     height: 60px;
     display: flex;
     align-items: center;
@@ -97,6 +117,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--text);
 }
 #misc {
     margin-left: auto;
@@ -109,6 +130,13 @@ nav {
     /* background: transparent; */
     border-radius: 10px;
     border: none;
+}
+#toggle-mode {
+    background: transparent;
+    color: var(--text);
+}
+#toggle-mode:hover {
+    background: var(--background-light);
 }
 #message {
     font-family: "Space Grotesk";

@@ -16,3 +16,14 @@ document.querySelectorAll("#nav-buttons > button").forEach((button) => {
         console.log(`${urls[button_name]}`)
     });
 });
+
+const theme_toggle = document.querySelector("#toggle-mode");
+
+theme_toggle.addEventListener("click", () => {
+    let theme = document.querySelector("html").getAttribute("data-theme");
+    if (theme == "dark") { theme = "light"; }
+    else if (theme == "light") { theme="dark"; }
+    document.querySelector("html").setAttribute("data-theme", theme);
+});
+
+console.log("js done");
