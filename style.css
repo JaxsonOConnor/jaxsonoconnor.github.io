@@ -27,7 +27,7 @@
 * {
     box-sizing: border-box;
 }
-#hidden {
+/* #hidden {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -35,7 +35,7 @@
     aspect-ratio: 1;
     cursor: pointer;
     border: none;
-}
+} */
 @font-face {
     font-family: "Integral Extra Bold";
     src: url("./fonts/Fontspring-DEMO-integralcf-extrabold.otf");
@@ -180,11 +180,4 @@ nav {
         width: 80%;
         text-align: center;
     }
-}
-
-nav {
-    display: none;
-}
-.box {
-    display: none;
 }
