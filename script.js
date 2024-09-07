@@ -1,6 +1,5 @@
 const urls = {
     "Youtube": "https://www.youtube.com/channel/UCQTU3FwHwScKeO22L1rI8xQ",
-    "TikTok": "https://www.tiktok.com/@jaxsyntax",
     "Discord": "jax.syntax",
     "Instagram": "https://www.instagram.com/jaxsyntax/"
 };
