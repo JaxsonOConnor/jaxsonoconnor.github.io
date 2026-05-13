@@ -104,3 +104,6 @@ document.addEventListener("keydown", (event) => {
         document.body.style.backgroundImage = "linear-gradient(to left, white 0%, 80%, blue)";
     }
 })
+
+
+/* adding comment hopefully this fixes style.css not updating in the Github repo */
