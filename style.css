@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Barcode+128&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "DM Sans";
+}
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid red;
+    height: 100px;
+}
+#navbar > #title {
+    font-size: 30px;
+}
+#nav-buttons {
+    margin-left: auto;
+}
+#game-cluster {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(177, 186, 202);
+    width: 50%;
+    height: 40%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(228, 228, 228);
+    padding: 0 20px;
+}
+#question-text {
+    text-align: center;
+    padding-top: 50px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+#question {
+    text-align: center;
+    font-size: 25px;
+    flex-wrap: wrap;
+    overflow-wrap: normal;
+}
+#answer {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 30px;
+    color: green;
+    font-weight: bold;
+}
+.direction-button {
+    transition: 0.3s ease-in-out;
+    color: black;
+    border: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+}
+.direction-button:hover {
+    background-color: orange;
+    color: white;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.direction-button:active {
+    transition: 0.2s ease-out;
+    background-color: rgb(255, 198, 122);
+}
+#left-button {
+    left: 0;
+    border-radius: 20px 5px 5px 20px;
+}
+#right-button {
+    right: 0;
+    border-radius: 5px 20px 20px 5px;
+}
